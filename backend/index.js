@@ -4,11 +4,7 @@ const mysql = require('mysql2'); // Asegúrate de estar usando mysql2 en lugar d
 const bcrypt = require('bcrypt');
 
 const app = express();
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-  });
+const port = 3000;
 
 // Configuración de la conexión a la base de datos
 const db = mysql.createConnection({
