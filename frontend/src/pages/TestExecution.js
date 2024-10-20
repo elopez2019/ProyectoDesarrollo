@@ -32,7 +32,7 @@ const TestExecution = () => {
             }
         };
         fetchTestCases();
-    }, [axiosInstance]);
+    }, []); // Eliminar axiosInstance de las dependencias
 
     // Función para manejar el cambio individual del estado (aprobado o fallido) y la evidencia de cada caso de prueba
     const handleInputChange = (testCaseId, field, value) => {
