@@ -8,10 +8,10 @@ const port = 3000;
 
 // Configuración de la conexión a la base de datos
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root', 
+    host: 'servermysqlgestor.mysql.database.azure.com',
+    user: 'usergestorpro', 
     password: 'Abcd1234.**', 
-    database: 'quality_management'
+    database: 'qualitiy_management'
 });
 
 db.connect((err) => {
