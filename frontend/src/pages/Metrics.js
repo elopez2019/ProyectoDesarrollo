@@ -28,7 +28,7 @@ const Metrics = () => {
 
   useEffect(() => {
     fetchMetrics();
-  }, [axiosInstance]);
+  }, [fetchMetrics]);
 
   // Función para generar el reporte en PDF
   const generatePDF = () => {
