@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Grid, Typography, TextField, Select, MenuItem, Button, Card, CardContent, CardActions, InputLabel, FormControl } from '@mui/material';
 
+// Crear la instancia de axios fuera del componente
+const axiosInstance = axios.create({
+    baseURL: 'http://localhost:3000',
+});
+
 const Defects = () => {
-    // update Estados para almacenar defectos, casos de prueba, y los campos del formulario
+    // Estados para almacenar defectos, casos de prueba y los campos del formulario
     const [defects, setDefects] = useState([]);
     const [testCases, setTestCases] = useState([]); 
     const [description, setDescription] = useState('');
@@ -12,10 +17,6 @@ const Defects = () => {
     const [testCaseId, setTestCaseId] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-
-    const axiosInstance = axios.create({
-        baseURL: 'http://localhost:3000',
-    });
 
     // Obtener defectos y casos de prueba al cargar el componente
     useEffect(() => {
@@ -35,7 +36,7 @@ const Defects = () => {
         };
 
         fetchData();
-    }, [axiosInstance]);
+    }, []); // Dependencias vacías para ejecutar solo una vez al montar
 
     // Manejar la creación de un nuevo defecto
     const handleSubmit = async (e) => {
@@ -61,12 +62,11 @@ const Defects = () => {
         }
     };
 
-
     const handleDelete = (id) => {
         axiosInstance.delete(`/defects/${id}`)
-          .then(() => setDefects(defects.filter(defects => defects.id !== id)))
-          .catch(error => console.error('Error deleting defects:', error));
-      };
+          .then(() => setDefects(defects.filter(defect => defect.id !== id)))
+          .catch(error => console.error('Error deleting defect:', error));
+    };
 
     // Renderizado del formulario y lista de defectos
     return (
