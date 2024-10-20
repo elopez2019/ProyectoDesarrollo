@@ -9,7 +9,7 @@ const Metrics = () => {
   const [error, setError] = useState(null);
 
   const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_BACKEND_URL,
+    baseURL: 'http://localhost:3000',
   });
 
   // Función para obtener las métricas desde el backend

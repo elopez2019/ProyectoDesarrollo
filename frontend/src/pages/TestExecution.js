@@ -12,7 +12,7 @@ const TestExecution = () => {
 
     // Instancia de Axios configurada para llamadas al backend
     const axiosInstance = axios.create({
-        baseURL: import.meta.env.VITE_BACKEND_URL,
+        baseURL: 'http://localhost:3000',
     });
 
     // Función para obtener los casos de prueba desde el backend

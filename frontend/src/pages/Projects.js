@@ -36,7 +36,7 @@ function Projects() {
   const [searchTerm, setSearchTerm] = useState(''); // Estado para la búsqueda
 
   const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_BACKEND_URL,
+    baseURL: 'http://localhost:3000',
   });
 
   useEffect(() => {

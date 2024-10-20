@@ -14,8 +14,8 @@ const Login = ({ setIsAuthenticated }) => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/login`, { username, password });
-      if (response.data.success) {
+        const response = await axios.post('http://localhost:3000/login', { username, password });
+        if (response.data.success) {
         setIsAuthenticated(true);
         navigate('/'); // Redirigir al Home después del login
       } else {

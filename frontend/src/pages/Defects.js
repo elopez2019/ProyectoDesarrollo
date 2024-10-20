@@ -4,7 +4,7 @@ import { Container, Grid, Typography, TextField, Select, MenuItem, Button, Card,
 
 // Crear la instancia de axios fuera del componente
 const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_BACKEND_URL,
+    baseURL: 'http://localhost:3000',
 });
 
 const Defects = () => {

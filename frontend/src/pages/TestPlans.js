@@ -43,7 +43,7 @@ function TestPlans() {
 
   // Crear una instancia de axios para la comunicación con el backend
   const axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_BACKEND_URL,
+    baseURL: 'http://localhost:3000',
   });
 
   // Cargar los datos de planes de prueba y proyectos al iniciar el componente
