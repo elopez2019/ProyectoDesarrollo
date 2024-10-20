@@ -12,7 +12,8 @@
         "concurrently": "^8.0.0",
         "jspdf": "^2.5.2",
         "jspdf-autotable": "^3.8.3",
-        "react-chartjs-2": "^3.3.0"
+        "react-chartjs-2": "^3.3.0",
+        "react-scripts": "^5.0.1"
     },
     "devDependencies": {
         "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
