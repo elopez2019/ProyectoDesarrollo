@@ -1,10 +1,12 @@
+import {FRONTEND_URL} from './config.js';
+
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2'); // Asegúrate de estar usando mysql2 en lugar de mysql
 const bcrypt = require('bcrypt');
-
 const app = express();
 const port = 3000;
+
 
 // Configuración de la conexión a la base de datos
 const db = mysql.createConnection({
@@ -22,8 +24,11 @@ db.connect((err) => {
     console.log('Conectado a la base de datos MySQL');
 });
 
-// Configura CORS para permitir solicitudes desde cualquier origen
-app.use(cors());
+// Configura CORS para permitir solicitudes solo desde el frontend en producción
+app.use(cors({
+    origin: process.env.FRONTEND_URL || 'http://localhost:3001' // En desarrollo permite localhost:3001
+}));
+
 app.use(express.json());
 
 // Rutas del servidor
