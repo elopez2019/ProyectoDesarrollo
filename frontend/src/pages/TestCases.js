@@ -42,7 +42,7 @@ function TestCases() {
 
   // Crear una instancia de axios para la comunicación con el backend
   const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://proyectodesarrollo-w7fa.onrender.com',
   });
 
   // Obtener casos de prueba y planes de prueba al cargar el componente

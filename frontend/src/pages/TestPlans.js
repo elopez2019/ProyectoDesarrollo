@@ -43,7 +43,7 @@ function TestPlans() {
 
   // Crear una instancia de axios para la comunicación con el backend
   const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://proyectodesarrollo-w7fa.onrender.com',
   });
 
   // Cargar los datos de planes de prueba y proyectos al iniciar el componente

@@ -14,7 +14,7 @@ const Login = ({ setIsAuthenticated }) => {
     e.preventDefault();
     setError('');
     try {
-        const response = await axios.post('http://localhost:3000/login', { username, password });
+        const response = await axios.post('https://proyectodesarrollo-w7fa.onrender.com/login', { username, password });
         if (response.data.success) {
         setIsAuthenticated(true);
         navigate('/'); // Redirigir al Home después del login

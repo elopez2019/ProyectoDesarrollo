@@ -36,7 +36,7 @@ function Projects() {
   const [searchTerm, setSearchTerm] = useState(''); // Estado para la búsqueda
 
   const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://proyectodesarrollo-w7fa.onrender.com',
   });
 
   useEffect(() => {

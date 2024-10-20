@@ -12,7 +12,7 @@ const TestExecution = () => {
 
     // Instancia de Axios configurada para llamadas al backend
     const axiosInstance = axios.create({
-        baseURL: 'http://localhost:3000',
+        baseURL: 'https://proyectodesarrollo-w7fa.onrender.com',
     });
 
     // Función para obtener los casos de prueba desde el backend
