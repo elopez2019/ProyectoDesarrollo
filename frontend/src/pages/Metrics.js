@@ -9,7 +9,7 @@ const Metrics = () => {
   const [error, setError] = useState(null);
 
   const axiosInstance = axios.create({
-    baseURL: 'https://proyectodesarrollo-w7fa.onrender.com',
+    baseURL: 'https://backend-gestor-247s.onrender.com',
   });
 
   // Función para obtener las métricas desde el backend

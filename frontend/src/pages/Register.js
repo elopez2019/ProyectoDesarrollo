@@ -22,7 +22,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post('https://proyectodesarrollo-w7fa.onrender.com/register', { username, password });
+      await axios.post('https://backend-gestor-247s.onrender.com/register', { username, password });
       alert('Usuario creado exitosamente');
       navigate('/login'); // Redirigir al login después del registro
     } catch (err) {
