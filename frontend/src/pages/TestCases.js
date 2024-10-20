@@ -61,7 +61,7 @@ function TestCases() {
       }
     };
     fetchData();
-  }, []);
+  }, [axiosInstance]);
 
   // Manejar la apertura y cierre del diálogo
   const handleClickOpen = () => setOpen(true);

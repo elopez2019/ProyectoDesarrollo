@@ -35,7 +35,7 @@ const Defects = () => {
         };
 
         fetchData();
-    }, []);
+    }, [axiosInstance]);
 
     // Manejar la creación de un nuevo defecto
     const handleSubmit = async (e) => {

@@ -65,7 +65,7 @@ function TestPlans() {
     axiosInstance.get('/projects')
       .then(response => setProjects(response.data))
       .catch(error => console.error('Error fetching projects:', error));
-  }, []);
+  }, [axiosInstance]);
 
   // Manejar la apertura y cierre del diálogo
   const handleClickOpen = () => setOpen(true);

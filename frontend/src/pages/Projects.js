@@ -51,7 +51,7 @@ function Projects() {
         setProjects(formattedProjects);
       })
       .catch(error => console.error('Error fetching projects:', error));
-  }, []);
+  }, [axiosInstance]);
 
   const handleClickOpen = () => setOpen(true);
   const handleClose = () => {
