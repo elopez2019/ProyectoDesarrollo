@@ -1,11 +1,10 @@
-import {FRONTEND_URL} from './config.js';
-
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2'); // Asegúrate de estar usando mysql2 en lugar de mysql
 const bcrypt = require('bcrypt');
 const app = express();
 const port = 3000;
+const { FRONTEND_URL } = require('./config.js');
 
 
 // Configuración de la conexión a la base de datos
