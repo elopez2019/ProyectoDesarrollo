@@ -28,7 +28,7 @@ const Metrics = () => {
 
   useEffect(() => {
     fetchMetrics();
-  }, [fetchMetrics]);
+  }, []); // Asegúrate de pasar un array vacío aquí para evitar llamadas innecesarias
 
   // Función para generar el reporte en PDF
   const generatePDF = () => {
@@ -53,7 +53,6 @@ const Metrics = () => {
 
   return (
     <div style={styles.container}>
-        
       <h1>Informe y Métricas de Calidad</h1>
       {/* Botón para exportar a PDF */}
       <button onClick={generatePDF} style={styles.button}>
