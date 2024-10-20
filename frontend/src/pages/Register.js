@@ -22,7 +22,7 @@ const Register = () => {
     }
 
     try {
-      await axios.post('http://localhost:3000/register', { username, password });
+      await axios.post(`${import.meta.env.VITE_BACKEND_URL}/register`, { username, password });
       alert('Usuario creado exitosamente');
       navigate('/login'); // Redirigir al login después del registro
     } catch (err) {

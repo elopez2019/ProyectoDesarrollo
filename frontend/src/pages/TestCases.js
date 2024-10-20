@@ -42,7 +42,7 @@ function TestCases() {
 
   // Crear una instancia de axios para la comunicación con el backend
   const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: import.meta.env.VITE_BACKEND_URL,
   });
 
   // Obtener casos de prueba y planes de prueba al cargar el componente
