@@ -4,7 +4,6 @@ const mysql = require('mysql2'); // Asegúrate de estar usando mysql2 en lugar d
 const bcrypt = require('bcrypt');
 const app = express();
 const port = 3000;
-const { FRONTEND_URL } = require('./config.js');
 
 
 // Configuración de la conexión a la base de datos
@@ -25,7 +24,7 @@ db.connect((err) => {
 
 // Configura CORS para permitir solicitudes solo desde el frontend en producción
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3001' // En desarrollo permite localhost:3001
+    origin: 'https://gestor-pruebas.onrender.com' || 'http://localhost:3001' // En desarrollo permite localhost:3001
 }));
 
 app.use(express.json());
